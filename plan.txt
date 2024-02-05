@@ -1,7 +1,7 @@
 Based on endpoints from the API; I will use the following routes and components with state management consideration for each
 Routes; 
 Homepage ‘/’; contains components will be Header and ArticleList, state management for list of articles will go here (say articlesList), fetches list of articles using getAllArticles
-Articles ‘/articles/:article_id’; contains components will be Header, ArticleInformation, CommentSection, state management for the information about the articles and the comments for the article (say articleInformation, commentsList), fetches article deatils using getArticleById and fetches the comments for the article using getAllCommentsFromID
+Article ‘/articles/:article_id’; contains components will be Header, ArticleInformation, CommentSection, state management for the information about the article and the comments for the article (say articleInformation, commentsList), fetches article deatils using getArticleById and fetches the comments for the article using getAllCommentsFromID
 Users ‘/users’; contains components will be Header, UserProfile, state management for the users articles and comments (say userDetails, userArticles, userComments), fetches user details using getAllUsers and will need to fetch users articles and comments
 
 With this structure, the user navigates to the root path ‘/’ and the Homepage component will be rendered, displaying the list of articles using the ArticleList component. When the user navigates to the articles path ‘/articles/:article_id’ the ArticleInformation component will render and display the details of a specific article. when the user navigates to the path ‘/users’ the UserProfile component will render, displaying the information about a specific user.
@@ -20,7 +20,7 @@ Homepage ‘/’
 |  Article 3 Title                   |
 |        ...                         |
 --------------------------------------
-Articles ‘/articles/:article_id’
+Article ‘/articles/:article_id’
 --------------------------------------
 |              Header                |
 --------------------------------------
@@ -65,7 +65,7 @@ Users ‘/users’
 
 App - 
 Homepage - articlesList
-Articles - articleInformation
+Article - articleInformation
          - commentsList
 Users    - userDetails
          - userArticles
