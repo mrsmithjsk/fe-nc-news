@@ -1,0 +1,63 @@
+Based on endpoints from the API; I will use the following routes and components with state management consideration for each
+Routes; 
+Homepage ‘/’; contains components will be Header and ArticleList, state management for list of articles will go here (say articlesList), fetches list of articles using getAllArticles
+Articles ‘/articles/:article_id’; contains components will be Header, ArticleInformation, CommentSection, state management for the information about the articles and the comments for the article (say articleInformation, commentsList), fetches article deatils using getArticleById and fetches the comments for the article using getAllCommentsFromID
+Users ‘/users’; contains components will be Header, UserProfile, state management for the users articles and comments (say userDetails, userArticles, userComments), fetches user details using getAllUsers and will need to fetch users articles and comments
+
+With this structure, the user navigates to the root path ‘/’ and the Homepage component will be rendered, displaying the list of articles using the ArticleList component. When the user navigates to the articles path ‘/articles/:article_id’ the ArticleInformation component will render and display the details of a specific article. when the user navigates to the path ‘/users’ the UserProfile component will render, displaying the information about a specific user.
+
+To hard code login functionality, I will dedicate a separate route for users to navigate to then redirect to their profile.
+
+Wireframes;
+Homepage ‘/’
+--------------------------------------
+|              Header                |
+--------------------------------------
+|            ArticleList             |
+|                                    |
+|  Article 1 Title                   |
+|  Article 2 Title                   |
+|  Article 3 Title                   |
+|        ...                         |
+--------------------------------------
+Articles ‘/articles/:article_id’
+--------------------------------------
+|              Header                |
+--------------------------------------
+|          ArticleDetail             |
+|                                    |
+|  Article Title                     |
+|  Author: AuthorName                |
+|                                    |
+|  Article Content                   |
+|                                    |
+|           CommentsSection          |
+|                                    |
+|  Comment 1                         |
+|  Comment 2                         |
+|  Comment 3                         |
+|     ...                            |
+--------------------------------------
+Users ‘/users’
+--------------------------------------
+|              Header                |
+--------------------------------------
+|         UserProfileContent         |
+|                                    |
+|  User Profile                      |
+|                                    |
+|  Username: UserName                |
+|  Email: user@email.com             |
+|                                    |
+|  Articles Posted by UserName       |
+|  - Article 1 Title                 |
+|  - Article 2 Title                 |
+|  - Article 3 Title                 |
+|         ...                        |
+|                                    |
+|  Comments by UserName              |
+|  - Comment 1 (Article: Link)       |
+|  - Comment 2 (Article: Link)       |
+|  - Comment 3 (Article: Link)       |
+|             ...                    |
+--------------------------------------
