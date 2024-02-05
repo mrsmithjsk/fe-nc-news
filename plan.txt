@@ -61,3 +61,12 @@ Users ‘/users’
 |  - Comment 3 (Article: Link)       |
 |             ...                    |
 --------------------------------------
+
+
+App - 
+Homepage - articlesList
+Articles - articleInformation
+         - commentsList
+Users    - userDetails
+         - userArticles
+         - userComments
