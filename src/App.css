@@ -77,4 +77,47 @@
   }
 }
 
+/* Article.css */
+.article-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;  
+  align-items: center;     
+}
+
+.article-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;  
+}
+
+.article-metadata {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+  text-align: center;  
+}
+
+.article-author, .article-date {
+  margin-right: 10px;
+}
+
+.article-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.article-body {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+  text-align: left; 
+}
+
 
