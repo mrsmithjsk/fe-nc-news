@@ -65,7 +65,7 @@ Users ‘/users’
 
 App - 
 Homepage - articlesList
-Article - articleInformation
+Article  - articleInformation
          - commentsList
 Users    - userDetails
          - userArticles

@@ -5,7 +5,7 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Homepage from './Homepage';
-// import Article from './Article';
+import Article from './Article';
 // import UserProfile from './UserProfile';
 
 const NewsApp = () => {
@@ -14,8 +14,8 @@ const NewsApp = () => {
     <h1>News</h1>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        {/* <Route exact path="/articles/:article_id" component={Article} />
-        <Route exact path="/users" component={UserProfile} /> */}
+        <Route path="/articles/:article_id" element={<Article />} />
+        {/* <Route exact path="/users" component={UserProfile} /> */}
       </Routes>
     </>
   );
