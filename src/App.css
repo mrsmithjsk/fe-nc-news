@@ -77,7 +77,6 @@
   }
 }
 
-/* Article.css */
 .article-container {
   max-width: 800px;
   margin: 0 auto;
@@ -120,4 +119,17 @@
   text-align: left; 
 }
 
+.comment-container {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #1f1f1f; 
+}
 
+.comment-author {
+  font-weight: bold;
+}
+
+.comment-body {
+  margin-top: 5px;
+}

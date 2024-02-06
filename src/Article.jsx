@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from "react";
 import {getArticleById} from './api';
 import { useParams } from 'react-router-dom';
+import ArticleComments from "./ArticleComments";
 
 const Article = () => {
     const [article, setArticle] = useState(null);
+    const [loading, setLoading] = useState(true);
     const { article_id } = useParams();
 
     useEffect(() => {
@@ -11,6 +13,7 @@ const Article = () => {
             try {
               const article = await getArticleById(article_id);
               setArticle(article);
+              setLoading(false);
             } catch (error) {
               console.error('Error fetching articles:', error);
             }
@@ -18,7 +21,8 @@ const Article = () => {
         fetchArticle();
     }, [article_id]);
     
-    if(!article) {return <div className="loading">Loading...</div>;}
+    if(loading) {return <div className="loading">Loading...</div>;}
+    if(!article) {return <div className="error">Failed to load article.</div>;}
 
     return (
         <div>
@@ -30,6 +34,8 @@ const Article = () => {
             </p>
             <img className="article-image" src={article.article_img_url} alt={article.title} />
             <p className="article-body">{article.body}</p>
+
+            <ArticleComments />
         </div>
         </div>
     )
