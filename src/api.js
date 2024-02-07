@@ -48,3 +48,13 @@ export const getArticleVotes = async (article_id) => {
         throw new Error('Failed to get article votes');
     }
 };
+
+export const postCommentById = async (article_id, { username, body }) => {
+    try {
+        const hardcodedUsername = 'cooljmessy'; 
+        const response = await axios.post(`${baseUrl}/articles/${article_id}/comments`, { username: hardcodedUsername, body });
+        return response.data.comments;
+    } catch (error) {
+        throw new Error('Failed to submit comment');
+    }
+};
