@@ -70,7 +70,6 @@
   padding: 16px;
 }
 
-/* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
   .article-list {
     grid-template-columns: 1fr;
@@ -132,4 +131,8 @@
 
 .comment-body {
   margin-top: 5px;
+}
+
+.vote-message {
+  color: black;
 }
