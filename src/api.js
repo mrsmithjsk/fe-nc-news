@@ -58,3 +58,12 @@ export const postCommentById = async (article_id, { username, body }) => {
         throw new Error('Failed to submit comment');
     }
 };
+
+export const deleteCommentById = async (comment_id) => {
+    try {
+        const response = await axios.delete(`${baseUrl}/comments/${comment_id}`);
+        return response.data;
+    } catch (error) {
+        throw new Error('Failed to delete comment');
+    }
+};
