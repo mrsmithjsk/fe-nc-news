@@ -114,6 +114,10 @@ const ArticleComments = () => {
     );
         } catch (error) {
             console.error('Error deleting comment:', error);
+            setFeedbackMessage('Failed to delete comment. Please try again.');
+            setTimeout(() => {
+                setFeedbackMessage('');
+            }, 3000);
         } finally {
             setDeletingCommentId(null);
         }
