@@ -128,7 +128,6 @@ const ArticleComments = () => {
     return (
         <>
         <div>
-            <p>Article Votes: {articleVotes}</p>
             {voteMessage && <p className="vote-message">{voteMessage}</p>}
             <button onClick={() => handleArticleVote(true)}>Upvote Article</button>
             <button onClick={() => handleArticleVote(false)}>Downvote Article</button>
@@ -146,7 +145,6 @@ const ArticleComments = () => {
                 </label> */}
                 <br />
                 <label className="form-label">
-                    Comment:
                     <textarea
                         value={newComment.body}
                         onChange={(e) => setNewComment({ ...newComment, body: e.target.value })}
@@ -162,7 +160,7 @@ const ArticleComments = () => {
         </div>
         {feedbackMessage && <p className="feedback-message">{feedbackMessage}</p>}
         <div>
-          <h3>Comments</h3>
+          <h3 className="comment-heading">Comments</h3>
           {comments.length > 0 ? (
             <ul>
               {comments.map((comment) => (

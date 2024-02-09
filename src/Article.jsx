@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import {getArticleById} from './api';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import ArticleComments from "./ArticleComments";
 
 const Article = () => {
@@ -34,8 +34,8 @@ const Article = () => {
             </p>
             <img className="article-image" src={article.article_img_url} alt={article.title} />
             <p className="article-body">{article.body}</p>
-
             <ArticleComments />
+            <Link to="/">Go back to Homepage</Link>
         </div>
         </div>
     )

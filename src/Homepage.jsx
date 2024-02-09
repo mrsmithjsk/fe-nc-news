@@ -5,12 +5,14 @@ import { getAllArticles } from './api';
 const Homepage = () => {
   const [articleList, setArticleList] = useState([]);
   const [selectedTopic, setSelectedTopic] = useState(null);
+  const [originalArticleList, setOriginalArticleList] = useState([]);
 
   useEffect(() => {
     const fetchArticles = async () => {
       try {
         const articles = await getAllArticles();
         setArticleList(articles);
+        setOriginalArticleList(articles); 
       } catch (error) {
         console.error('Error fetching articles:', error);
       }
@@ -23,9 +25,9 @@ const Homepage = () => {
         let filteredArticles;
     
         if (topic) {
-          filteredArticles = articleList.filter(article => article.topic === topic);
+          filteredArticles = originalArticleList.filter(article => article.topic === topic);
         } else {
-          filteredArticles = await getAllArticles();
+          filteredArticles = originalArticleList;
         }
         setArticleList(filteredArticles);
       } catch (error) {
